@@ -1,0 +1,3 @@
+DROP DATABASE IF EXISTS fetch_db;
+
+CREATE DATABASE fetch_db;
