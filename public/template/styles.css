@@ -8,7 +8,7 @@
     --primary-color: #D16766;
     --secondary-color: #35414F;
     --tertiary-color: #BDC561;
-    --accent-color: #C1C1C1;
+    --accent-color: #B3C5D7;
 }
 
 body{
@@ -117,9 +117,78 @@ nav li{
     color: var(--primary-color);
 }
 
+.form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
+.login-form{
+    display: flex;
+    flex: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    border: solid 0px;
+    border-radius: 15px;
+    background-color: var(--accent-color);
+    height: 100%;
+    width: 30%;
+}
+
+.login-form .firstname input{
+    background-color: white;
+    border: solid 0;
+    border-radius: 15px;
+    padding: 5px;
+    width: 100%;
+    margin-top: 3px;
+}
+
+.login-form .lastname input{
+    background-color: white;
+    border: solid 0;
+    border-radius: 15px;
+    padding: 5px;
+    width: 100%;
+    margin-top: 3px;
+}
+
+.login-form .email input{
+    background-color: white;
+    border: solid 0;
+    border-radius: 15px;
+    padding: 5px;
+    width: 100%;
+    margin-top: 3px;
+}
+
+.login-form .password input{
+    background-color: white;
+    border: solid 0;
+    border-radius: 15px;
+    padding: 5px;
+    width: 100%;
+    margin-top: 3px;
+}
+
+.firstname, .lastname, .email, .password{
+    padding: 5px 0 5px 0;
+}
+
+.register{
+    color: white;
+    text-decoration: none;
+}
+
+.register:hover{
+    color: var(--primary-color)
+}
 
 footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
     padding: 5px;
     background-color: var(--secondary-color);
     color: white;
@@ -127,3 +196,4 @@ footer{
     flex: wrap;
     align-items: center;
 }
+
