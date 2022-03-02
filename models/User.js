@@ -32,22 +32,14 @@ User.init(
         len: [1],
       },
     },
-    post_id: {
-        type: DataTypes.INTEGER,
-        references: {
-          model: 'post',
-          key: 'id'
-        }
-      }
-    },
-    // category_id: {
+    // post_id: {
     //   type: DataTypes.INTEGER,
     //   references: {
-    //     model: "category",
+    //     model: "post",
     //     key: "id",
     //   },
     // },
-
+  },
   {
     sequelize,
     timestamps: false,
