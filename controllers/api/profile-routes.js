@@ -36,6 +36,31 @@ router.get('/:id', (req, res) => {
     });
 });
 
+//update dog profile
+router.put('/:id', (req, res) => {
+    Profile.update(
+        {
+            description: req.body.description
+        },
+        {
+            where: {
+                id: req.params.id
+            }
+        }    
+    )
+    .then(dbProfileData => {
+        if(!dbProfileData) {
+            res.stuats(404).json({ message: 'No profile found with this id'})
+            return;
+        }
+        res.json(dbProfileData);
+    })
+    .catch(err => {
+        console.log(err);
+        res.status(500).json(err);
+    })
+})
+
 //add new dog profile
 router.post("/", (req, res) => {
     Profile.create({
