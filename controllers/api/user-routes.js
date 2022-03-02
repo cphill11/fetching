@@ -35,19 +35,19 @@ router.get("/:id", (req, res) => {
     });
 });
 
-// // CREATE new user data
-// router.post("/", (req, res) => {
-//      User.create({
-//         user_name: req.body.user_name,
-//         pet_name: req.body.pet_name,
-//         comment_text: req.body.comment_text
-//     })
-//     .then(dbUserData => res.json(dbUserData))
-//     .catch(err => {
-//         console.log(err);
-//         res.status(500).json(err);
-//     });
-// });
+// CREATE new user data
+router.post("/", (req, res) => {
+     User.create({
+        user_name: req.body.user_name,
+        pet_name: req.body.pet_name,
+        comment_text: req.body.comment_text
+    })
+    .then(dbUserData => res.json(dbUserData))
+    .catch(err => {
+        console.log(err);
+        res.status(500).json(err);
+    });
+});
 
 // update user data by it's `id' value
 router.put("/:id", (req, res) => {
