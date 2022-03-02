@@ -1,6 +1,7 @@
 const router = require("express").Router();
 const { Profile } = require('../../models');
 
+//get all pets 
 router.get("/", (req, res) => {
     Profile.findAll({
         attributes: ['id', 'petName', 'owner', 'age', 'gender', 'breed', 'description']
@@ -13,6 +14,27 @@ router.get("/", (req, res) => {
     })
 
 })
+
+//get one pet 
+router.get('/:id', (req, res) => {
+    Profile.findOne({
+        where: {
+            id: req.params.id
+        },
+        attributes: ['id', 'petName', 'owner', 'age', 'gender', 'breed', 'description']
+    })
+    .then(dbProfileData => {
+        if(!dbProfileData) {
+            res.status(404).json({ message: 'No profile found with this id.' })
+            return;
+        }
+        res.json(dbProfileData);
+    })
+    .catch(err => {
+        console.log(err);
+        res.status(500).json(err);
+    });
+});
 
 //add new dog profile
 router.post("/", (req, res) => {
