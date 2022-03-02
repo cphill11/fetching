@@ -49,7 +49,7 @@ router.get("/:id", (req, res) => {
 });
 
 // create new user data 
-User.post("/", (req, res) => {
+router.post("/", (req, res) => {
     User.create(req.body)
     .then((user) => {
       // if there's product tags, we need to create pairings to bulk create in the ProductTag model

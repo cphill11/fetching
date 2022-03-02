@@ -1,18 +1,11 @@
-const router = require("express").Router();
-// use to collect packaged group of API endpoints & prefix w/ the path /api
-const apiRoutes = require("./api");
-const userRoutes = require("./user-routes.js");
+const router = require('express').Router();
 
-// // use to prefix all dashboard views with /dashboard
-// const dashboardRoutes = require("./dashboard-routes.js");
+const apiRoutes = require('./api');
 
-router.use("/", userRoutes);
-router.use("/api", apiRoutes);
-// router.use("/dashboard", dashboardRoutes);
+router.use('/api', apiRoutes);
 
-// generates error message if request an incorrect resource
 router.use((req, res) => {
-  res.status(404).end();
+    res.status(404).end();
 });
 
 module.exports = router;
