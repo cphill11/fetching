@@ -1,15 +1,27 @@
 # fetching
 
-
 ## Description
-
-
+Canine social app for fun-loving puppers who love to get out and wag their tails!  Owners can add pictures, describe their four-legged friends and network with other canine enthusiasts!
 
 ## Installation
-
+* npm
+* bcrypt
+* cloudinary
+* dotenv
+* express
+* express-handlebars
+* mysql
+* mysql2
+* sequelize
 
 ## Usage
+As a dog owner, I want to showcase my four-legged friend so that the world knows what a cute and wonderful dog they are.
 
+As a dog owner, I want to be able to edit my canine's profile so that as my dog changes, my dog will be more likely to be matched with appropriate play mates for my dog's needs.
+
+As a dog owner, I want to network with other dog owners who raise fun dogs so that my dog will have play buddies. 
+
+As a dog owner, I want to screen out potentially unsuitable play mates so that my dog is not playing with unscrupulous companions.
 
 
 ## Websites
@@ -19,11 +31,11 @@ Screencastify link:
 
 ## Image
 
-![Screenshot](/assets/images/screenshot.png)
+![Screenshot](/public/template/assets/images/screenshot.png)
 
 ## Credits:
 
-Danielle Fortin, Dariaga Iskakova, Michael Monihan, and Criste Phillips.
+Danielle Fortin, Dariga Iskakova, Michael Monihan, and Criste Phillips.
 
 ## License
 MIT
