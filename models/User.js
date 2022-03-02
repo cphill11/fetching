@@ -22,6 +22,8 @@ User.init(
     pet_name: {
       type: DataTypes.STRING,
       allowNull: false,
+
+      //references profile.petName
     },
     comment_text: {
       type: DataTypes.STRING,
