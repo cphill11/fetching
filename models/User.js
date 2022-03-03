@@ -38,7 +38,6 @@ User.init(
     //     model: "post",
     //     key: "id",
     //   },
-    // },
   },
   {
     sequelize,
