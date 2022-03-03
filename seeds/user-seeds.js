@@ -13,7 +13,7 @@ const userData = [
   },
   {
     product_name: 'Danielle Fortin',
-    pet_name: 'Ripley',
+    pet_name: 'Chance',
     comment_text: ''
   },
   {
