@@ -4,13 +4,13 @@
     <span>({{format_url post_url}})</span>
   </div>
   <div class="meta">
-    {{!-- {{vote_count}}
-    {{!-- format_plural "point" replaced point(s) by --  INCLUDE THIS WHEN 'LIKE' functionality fixed}}
+    {{vote_count}}
+    {{!-- format_plural "point" replaced point(s) by --  INCLUDE THIS WHEN 'LIKE' functionality fixed --}}
     {{format_plural "point" vote_count}}
     by
     {{user.username}}
     on
-    {{format_date created_at}} --}}
+    {{format_date created_at}}
     |
     <a href="/post/{{id}}">{{comments.length}}
       {{format_plural "comment" comments.length}}</a>

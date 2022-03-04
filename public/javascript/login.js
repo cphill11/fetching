@@ -7,7 +7,7 @@ async function loginFormHandler(event) {
     const password = document.querySelector("#password-login").value.trim();
   
     if (email && password) {
-      const response = await fetch("/api/users/login", {
+      const response = await fetch("/api/user/login", {
         method: "post",
         body: JSON.stringify({
           email,
@@ -17,7 +17,7 @@ async function loginFormHandler(event) {
       });
   
       if (response.ok) {
-        document.location.replace("/profile");
+        document.location.replace("/pet");
       } else {
         alert(response.statusText);
       }
@@ -43,7 +43,7 @@ async function loginFormHandler(event) {
     // POST method for user interaction to go from form to our server
     // use conditional to make sure all fields have values before making the POST request
     if (username && email && password) {
-      const response = await fetch("/api/users", {
+      const response = await fetch("/api/user", {
         method: "post",
         body: JSON.stringify({
           username,

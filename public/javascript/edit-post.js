@@ -18,7 +18,7 @@ async function editFormHandler(event) {
     });
   
     if (response.ok) {
-      document.location.replace("/profile/");
+      document.location.replace("/pet/");
     } else {
       alert(response.statusText);
     }

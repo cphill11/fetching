@@ -1,6 +1,6 @@
-const { Profile } = require('../models')
+const { Pet } = require('../models')
 
-const profileData = [
+const petData = [
 
     {
         petName: "Chance",
@@ -28,6 +28,6 @@ const profileData = [
     }
 ]
 
-const seedProfiles = () => Profile.bulkCreate(profileData);
+const seedPets = () => Pet.bulkCreate(petData);
 
-module.exports = seedProfiles;
+module.exports = seedPets;
