@@ -1,6 +1,6 @@
-{{!-- placeholder; file name may need to be changed after Dariga completes her code --}}
+{{!-- placeholder; file fine points may need to be changed after Dariga completes her code --}}
 
-{{!-- <section>
+<section>
   <h2>Create New Post</h2>
 
   <form class="new-post-form">
@@ -16,7 +16,7 @@
   </form>
 </section>
 
-{{!-- allows use of template in dashboard-routes.js --}}
+{{!-- allows use of template in profile-routes.js --}}
 {{#if posts.length}}
 <section>
   <h2>Your Posts</h2>
@@ -24,12 +24,12 @@
     {{#each posts as |post|}}
     <li>
       {{> post-info post}}
-      <a href="/dashboard/edit/{{post.id}}" class="edit-link">Edit post</a>
+      <a href="/profile/edit/{{post.id}}" class="edit-link">Edit post</a>
     </li>
     {{/each}}
   </ol>
 </section>
 {{/if}}
 
-{{!-- links to file that dashboard uses to create new post --}}
-<script src="/javascript/add-post.js"></script> --}}
+{{!-- links to file that profile uses to create new post --}}
+<script src="/javascript/add-post.js"></script>

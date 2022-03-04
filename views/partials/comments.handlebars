@@ -1,0 +1,15 @@
+<div class="comments">
+    {{!-- used 'this' to refer to the parent object & access the array --}}
+  {{#each this}}
+    <section class="comment">
+      <div class="meta">
+        {{user.username}}
+        on
+        {{format_date created_at}}
+      </div>
+      <div class="text">
+        {{comment_text}}
+      </div>
+    </section>
+  {{/each}}
+</div>

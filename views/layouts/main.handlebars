@@ -1,7 +1,7 @@
-{{! Main layout setup for handlebars must be tucked into views/layouts/mainlhandlebars }}
-{{! views folder is a required UI component b/c of Model-View-Controller architectural stx for handlebars }}
+{{!-- {{! Main layout setup for handlebars must be tucked into views/layouts/mainlhandlebars }}
+{{! views folder is a required UI component b/c of Model-View-Controller architectural stx for handlebars }} --}}
 
-{{!-- <html lang="en">
+<html lang="en">
 
   <head>
     <meta charset="UTF-8" />
@@ -19,8 +19,8 @@
         <nav>
           {{#if loggedIn}}
           {{!-- will be completed after Dariga completes login functionality --}}
-          {{!-- login link for dashboard --}}
-            <a href="/dashboard">dashboard</a>
+          {{!-- login link for profile --}}
+            <a href="/profile">Profile</a>
             <button id="logout" class="btn-no-style">logout</button>
           {{else}}
             <a href="/login">login</a>
@@ -40,4 +40,4 @@
     {{/if}}
   </body>
 
-</html> --}}
+</html>
