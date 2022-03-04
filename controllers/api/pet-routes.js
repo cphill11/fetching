@@ -4,7 +4,7 @@ const { Pet } = require('../../models');
 //get all pets 
 router.get("/", (req, res) => {
     Pet.findAll({
-        attributes: ['id', 'petName', 'owner', 'age', 'gender', 'breed', 'description']
+        attributes: ['id', 'petName', 'owner_id', 'age', 'gender', 'breed', 'description']
     })
     .then(dbPetData => {res.json(dbPetData)
          console.log("hello");})
@@ -21,7 +21,7 @@ router.get('/:id', (req, res) => {
         where: {
             id: req.params.id
         },
-        attributes: ['id', 'petName', 'owner', 'age', 'gender', 'breed', 'description']
+        attributes: ['id', 'petName', 'owner_id', 'age', 'gender', 'breed', 'description']
     })
     .then(dbPetData => {
         if(!dbPetData) {
@@ -65,7 +65,7 @@ router.put('/:id', (req, res) => {
 router.post("/", (req, res) => {
     Pet.create({
         petName: req.body.petName,
-        owner: req.body.owner,
+        owner_id: req.body.owner_id,
         age: req.body.age,
         gender: req.body.gender,
         breed: req.body.breed,
