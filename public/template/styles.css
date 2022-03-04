@@ -23,7 +23,11 @@ h1{
 }
 
 .logo{
-    height: 30%;
+    height: 80px;
+}
+
+.fetch-logo{
+    height: 100%;
 }
 
 .hero{
@@ -33,7 +37,7 @@ h1{
     min-height: 100vh;
     padding: 100px;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     background: var(--secondary-color);
     color: white;
@@ -72,7 +76,6 @@ header{
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    position: sticky;
     top: 0;
 }
 
