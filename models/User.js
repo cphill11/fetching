@@ -29,7 +29,6 @@ User.init(
         isEmail: true,
       },
     },
-
     password: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -43,7 +42,7 @@ User.init(
     //   type: DataTypes.STRING,
     //   allowNull: false,
     //   validate: {
-    //     len: [1],
+    //     len: [250],
     //   },
     // },
     // for owners to comment (?)  or 'like' profile
