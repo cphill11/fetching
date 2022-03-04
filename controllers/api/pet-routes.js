@@ -1,12 +1,12 @@
 const router = require("express").Router();
-const { Profile } = require('../../models');
+const { Pet } = require('../../models');
 
 //get all pets 
 router.get("/", (req, res) => {
-    Profile.findAll({
+    Pet.findAll({
         attributes: ['id', 'petName', 'owner', 'age', 'gender', 'breed', 'description']
     })
-    .then(dbProfileData => {res.json(dbProfileData)
+    .then(dbPetData => {res.json(dbPetData)
          console.log("hello");})
     .catch(err => {
         console.log(err);
@@ -17,18 +17,18 @@ router.get("/", (req, res) => {
 
 //get one pet 
 router.get('/:id', (req, res) => {
-    Profile.findOne({
+    Pet.findOne({
         where: {
             id: req.params.id
         },
         attributes: ['id', 'petName', 'owner', 'age', 'gender', 'breed', 'description']
     })
-    .then(dbProfileData => {
-        if(!dbProfileData) {
-            res.status(404).json({ message: 'No profile found with this id.' })
+    .then(dbPetData => {
+        if(!dbPetData) {
+            res.status(404).json({ message: 'No pet found with this id.' })
             return;
         }
-        res.json(dbProfileData);
+        res.json(dbPetData);
     })
     .catch(err => {
         console.log(err);
@@ -38,7 +38,7 @@ router.get('/:id', (req, res) => {
 
 //update dog profile
 router.put('/:id', (req, res) => {
-    Profile.update(
+    Pet.update(
         {
             description: req.body.description
         },
@@ -48,12 +48,12 @@ router.put('/:id', (req, res) => {
             }
         }    
     )
-    .then(dbProfileData => {
-        if(!dbProfileData) {
-            res.stuats(404).json({ message: 'No profile found with this id'})
+    .then(dbPetData => {
+        if(!dbPetData) {
+            res.stuats(404).json({ message: 'No pet found with this id'})
             return;
         }
-        res.json(dbProfileData);
+        res.json(dbPetData);
     })
     .catch(err => {
         console.log(err);
@@ -63,7 +63,7 @@ router.put('/:id', (req, res) => {
 
 //add new dog profile
 router.post("/", (req, res) => {
-    Profile.create({
+    Pet.create({
         petName: req.body.petName,
         owner: req.body.owner,
         age: req.body.age,
@@ -71,7 +71,7 @@ router.post("/", (req, res) => {
         breed: req.body.breed,
         description: req.body.description
     })
-    .then(dbProfileData => res.json(dbProfileData))
+    .then(dbPetData => res.json(dbPetData))
     .catch(err => {
         console.log(err);
         res.status(500).json(err);
