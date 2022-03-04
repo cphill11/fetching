@@ -16,7 +16,7 @@ Profile.init(
             type: DataTypes.STRING,
             allowNull: false,
         },
-        owner: {
+        owner_id: {
             type: DataTypes.STRING,
             allowNull: false,
         },

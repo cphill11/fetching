@@ -25,13 +25,34 @@ User.init(
 
       //references profile.petName
     },
-    comment_text: {
+    email: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      // there cannot be any duplicate email values in this table
+      unique: true,
+      // if allowNull is set to false, we can run our data through validators before creating the table data
+      validate: {
+        isEmail: true,
+      },
+    },
+
+    password: {
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
-        len: [1],
+        // this means the password must be at least eight characters long
+        len: [8],
       },
     },
+
+    // comment_text: {
+    //   type: DataTypes.STRING,
+    //   allowNull: false,
+    //   validate: {
+    //     len: [1],
+    //   },
+    // },
+    // for owners to comment (?)  or 'like' profile
     // post_id: {
     //   type: DataTypes.INTEGER,
     //   references: {
