@@ -19,12 +19,6 @@ User.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    pet_name: {
-      type: DataTypes.STRING,
-      allowNull: false,
-
-      //references profile.petName
-    },
     email: {
       type: DataTypes.STRING,
       allowNull: false,
