@@ -12,12 +12,12 @@ const userData = [
     comment_text: ''
   },
   {
-    product_name: 'Danielle Fortin',
+    user_name: 'Danielle Fortin',
     pet_name: 'Chance',
     comment_text: ''
   },
   {
-    product_name: 'Michael Monihan',
+    user_name: 'Michael Monihan',
     pet_name: 'Ripley',
     comment_text: ''
   },
