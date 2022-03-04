@@ -18,13 +18,14 @@
         </div>
         <nav>
             <ul>
-                <li>Home</li>
-                {{#if loggedIn}}
+                <li><a href="/">Home</a></li>
+                <li><a href="/signup">Sign Up</a></li>
+                {{!-- {{#if loggedIn}} --}}
                 <a href="/pet">Pet Profile</a>
                 <li>Log Out</li>
-                {{else}}
-               <a href="/login">Log In</a>
-                {{/if}}
+                {{!-- {{else}} --}}
+               <li><a href="/login">Log In</a></li>
+                {{!-- {{/if}} --}}
             </ul>
         </nav>
     </header>
