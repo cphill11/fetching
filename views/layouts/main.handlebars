@@ -23,7 +23,7 @@
                 <a href="/pet">Pet Profile</a>
                 <li>Log Out</li>
                 {{else}}
-               <a href="/login">login</a>
+               <a href="/login">Log In</a>
                 {{/if}}
             </ul>
         </nav>
@@ -37,13 +37,14 @@
         Thanks for visiting!
       </footer>
     </div>
-    {{#if loggedIn}}
-      <script src="/javascript/logout.js"></script>
-    {{/if}}
+    
   </body>
 
    <footer>
         <p>	&copy; 2021 Danielle Fortin, Dariga Iskakova, Michael Monihan, and Criste Phillips</p>
     </footer>
+    {{#if loggedIn}}
+      <script src="/javascript/logout.js"></script>
+    {{/if}}
 
 </html>
