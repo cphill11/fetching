@@ -1,0 +1,32 @@
+<!-- for cloudinary -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript File Upload</title>
+</head>
+
+<body>
+    <button id="upload_widget">Upload files</button>
+
+    <script src="https://widget.cloudinary.com/v2.0/global/all.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        var widget = cloudinary.applyUploadWidget({
+            cloudName: 'demo',
+            uploadPreset: 'blog_upload'
+        },
+            (error, result) => {
+                if (!error && result && result.event === "success") {
+                    console.log('Done uploading..: ', result.info);
+                }
+
+            });
+
+        document.getElementById("upload_widget").addEventListener("click", function () {
+            myWidget.open();
+        }, false);
+    </script>
+</body>
+
+</html>
