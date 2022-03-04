@@ -1,5 +1,5 @@
 const seedUsers = require('./user-seeds');
-// const seedProfiles = require('./profiles-seeds');
+// const seedProfiles = require('./profile-seeds');
 // const seedTags = require('./tag-seeds');
 // const seedProductTags = require('./product-tag-seeds');
 
@@ -11,8 +11,8 @@ const seedAll = async () => {
   await seedUsers();
   console.log('\n----- USERS SEEDED -----\n');
 
-//   await seedProfiles();
-//   console.log('\n----- PROFILES SEEDED -----\n');
+  // await seedProfile();
+  // console.log('\n----- PROFILES SEEDED -----\n');
 
 //   await seedTags();
 //   console.log('\n----- TAGS SEEDED -----\n');

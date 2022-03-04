@@ -19,12 +19,6 @@ User.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    pet_name: {
-      type: DataTypes.STRING,
-      allowNull: false,
-
-      //references profile.petName
-    },
     email: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -35,7 +29,6 @@ User.init(
         isEmail: true,
       },
     },
-
     password: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -49,7 +42,7 @@ User.init(
     //   type: DataTypes.STRING,
     //   allowNull: false,
     //   validate: {
-    //     len: [1],
+    //     len: [250],
     //   },
     // },
     // for owners to comment (?)  or 'like' profile
