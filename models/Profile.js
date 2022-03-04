@@ -17,8 +17,11 @@ Profile.init(
             allowNull: false,
         },
         owner_id: {
-            type: DataTypes.STRING,
-            allowNull: false,
+            type: DataTypes.INTEGER,
+            references:{
+                model: 'user',
+                key: 'id'
+            }
         },
         age: {
             type: DataTypes.INTEGER,

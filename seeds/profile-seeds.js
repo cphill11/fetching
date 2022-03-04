@@ -4,7 +4,7 @@ const profileData = [
 
     {
         petName: "Chance",
-        owner: "Danielle",
+        owner: "3",
         age: "5",
         gender: "true",
         breed: "East African Village Dog",
@@ -12,7 +12,7 @@ const profileData = [
     },
     {
         petName: "Frizz",
-        owner: "Kathleen",
+        owner: "1",
         age: "3",
         gender: "true",
         breed: "Collie Mix",
@@ -20,20 +20,12 @@ const profileData = [
     },
     {
         petName: "Ripley",
-        owner: "Criste",
+        owner: "3",
         age: "5",
         gender: "true",
         breed: "Doberman",
         description: "Ripley is a nice doberman."
-    },
-    {
-        petName: "Luna",
-        owner: "Olivia",
-        age: "2",
-        gender: "true",
-        breed: "Pitbull Mix",
-        description: "Luna is a silly dog."
-    },
+    }
 ]
 
 const seedProfiles = () => Profile.bulkCreate(profileData);
