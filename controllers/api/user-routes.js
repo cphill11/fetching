@@ -20,7 +20,7 @@ router.get("/:id", (req, res) => {
     where: {
       id: req.params.id,
     },
-    attributes: ["id", "user_name", "pet_name", "comment_text"],
+    attributes: ["id", "user_name", "pet_name", "email", "password"],
   })
     .then((dbUserData) => {
       if (!dbUserData) {
@@ -40,7 +40,9 @@ router.post("/", (req, res) => {
      User.create({
         user_name: req.body.user_name,
         pet_name: req.body.pet_name,
-        comment_text: req.body.comment_text
+        // comment_text: req.body.comment_text
+        email: req.body.email,
+        password: req.body.password
     })
     .then(dbUserData => res.json(dbUserData))
     .catch(err => {
@@ -53,7 +55,7 @@ router.post("/", (req, res) => {
 router.put("/:id", (req, res) => {
   User.update(
       {
-        description: req.body.description
+        user_name: req.body.user_name
       },
       {
         where: {
