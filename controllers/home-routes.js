@@ -16,6 +16,4 @@ router.get('/pet', (req, res) => {
     res.render('pet');
 });
 
-
-
 module.exports = router;
