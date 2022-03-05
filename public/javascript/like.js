@@ -1,4 +1,3 @@
-// cleanup to match our code
 // set up button click for like button
 
 // define function
