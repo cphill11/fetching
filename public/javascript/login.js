@@ -23,10 +23,7 @@ async function loginFormHandler(event) {
       }
     }
   }
-  
-  document
-    .querySelector(".login-form")
-    .addEventListener("submit", loginFormHandler);
+
   
   // listen for submit event in the form
   function signupFormHandler(event) {
@@ -61,6 +58,6 @@ async function loginFormHandler(event) {
     }
   }
   
-  document
-    .querySelector(".signup-form")
-    .addEventListener("submit", signupFormHandler);
+  document.querySelector('.signup-form').addEventListener('submit', signupFormHandler);
+  document.querySelector('.login-form').addEventListener('submit', loginFormHandler);
+  

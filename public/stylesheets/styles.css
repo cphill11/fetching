@@ -101,12 +101,10 @@ nav li{
     padding: 3px;
 }
 
-
-
 .hero-btn{
     padding-top: 20px;
 }
-.sign-up-btn{
+.submit{
     background-color: var(--primary-color);
     color: white;
     padding: 10px;
@@ -115,7 +113,7 @@ nav li{
     font-size: 20px;
 }
 
-.sign-up-btn:hover{
+.submit:hover{
     background-color: white;
     color: var(--primary-color);
 }
@@ -139,7 +137,7 @@ nav li{
     width: 30%;
 }
 
-.login-form .firstname input{
+.login-form .form-input input{
     background-color: white;
     border: solid 0;
     border-radius: 15px;
@@ -148,7 +146,26 @@ nav li{
     margin-top: 3px;
 }
 
-.login-form .lastname input{
+.row{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.signup-form{
+    display: flex;
+    flex: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    border: solid 0px;
+    border-radius: 15px;
+    background-color: var(--accent-color);
+    height: 100%;
+    width: 30%;
+}
+
+.signup-form .form-input input{
     background-color: white;
     border: solid 0;
     border-radius: 15px;
@@ -157,25 +174,7 @@ nav li{
     margin-top: 3px;
 }
 
-.login-form .email input{
-    background-color: white;
-    border: solid 0;
-    border-radius: 15px;
-    padding: 5px;
-    width: 100%;
-    margin-top: 3px;
-}
-
-.login-form .password input{
-    background-color: white;
-    border: solid 0;
-    border-radius: 15px;
-    padding: 5px;
-    width: 100%;
-    margin-top: 3px;
-}
-
-.firstname, .lastname, .email, .password{
+.form-input{
     padding: 5px 0 5px 0;
 }
 
@@ -186,6 +185,37 @@ nav li{
 
 .register:hover{
     color: var(--primary-color)
+}
+
+.pet-card{
+    display: flex;
+    flex: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: rgba(209, 103, 102, 0.5);
+    box-shadow: 0px 5px 10px 0px rgba(209, 103, 102, 0.5);
+    width: 40%;
+    border-radius: 15px;
+}
+
+.pet-card img{
+    width: 300px;
+}
+
+.icons{
+    display: flex;
+    flex: wrap;
+    flex-direction: row;
+    justify-content: center;
+    width: 40%;
+}
+
+.heart-icon:hover{
+    color: var(--tertiary-color);
+}
+
+.fa-xmark:hover{
+    color: var(--tertiary-color);
 }
 
 footer{
