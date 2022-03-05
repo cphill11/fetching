@@ -1,5 +1,3 @@
-// cleanup to match our code
-
 // capture the form submission
 async function commentFormHandler(event) {
     event.preventDefault();
@@ -12,8 +10,7 @@ async function commentFormHandler(event) {
   
     // functionality wrapped in an "if" statement to prevent users from submitting empty string
     if (comment_text) {
-        const response = await fetch('/api/comments', {
-            // method is defined as POST, includes 2 body properties
+        const response = await fetch('/api/user', {
           method: 'POST',
           body: JSON.stringify({
             post_id,

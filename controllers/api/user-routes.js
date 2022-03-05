@@ -5,7 +5,7 @@ const { User } = require("../../models");
 router.get("/", (req, res) => {
     console.log(User);
   User.findAll({
-    attributes: ["id", "username", "email", "password"],
+    attributes: ["id", "username", "email", "password", "comment_text"],
   })
     .then((dbUserData) => res.json(dbUserData))
     .catch((err) => {
@@ -20,7 +20,7 @@ router.get("/:id", (req, res) => {
     where: {
       id: req.params.id,
     },
-    attributes: ["id", "username", "email", "password"],
+    attributes: ["id", "username", "email", "password", "comment_text"],
   })
     .then((dbUserData) => {
       if (!dbUserData) {
