@@ -1,6 +1,53 @@
 {{!-- edit profile placeholder; file fine points may need to be changed after Dariga completes her code --}}
+<div>
+  Test
+  <input type="file" name="file" id="upload"/>
+</div>
+<div class="row">
+        <div class="form">
+            <form class="login-form">
+                <h2>Create a Profile</h2>
+                <div class="form-input">
+                    <label for="petName">Pet name</label>
+                    <div class="sec-2">
+                        <input type="petName" name="petName" placeholder="Your pet's name"/>
+                    </div>
+                </div>
+                <div class="form-input">
+                    <label for="age">Age</label>
+                    <div class="sec-2">
+                      <input class="age" type="age" name="age" placeholder="Age"/>
+                    </div>
+                  </div>
+                  <div class="form-input">
+                    <label for="gender">Gender</label>
+                    <div class="sec-2">
+                      <input class="gender" type="gender" name="gender" placeholder="Gender"/>
+                    </div>
+                  </div>
+                  <div class="form-input">
+                    <label for="breed">Breed</label>
+                    <div class="sec-2">
+                      <input class="breed" type="breed" name="breed" placeholder="Breed"/>
+                    </div>
+                  </div>
+                  <div class="form-input">
+                    <label for="description">Bio</label>
+                    <div class="sec-2">
+                      <input class="description" type="description" name="description" placeholder="What are your dog's likes/dislikes?"/>
+                    </div>
+                  </div>
+                  <button class="submit">Create profile </button>
+              </form>
+              
+        </div>
+        
+    </div>
 
-<section>
+
+
+
+{{!-- <section>
   <h2>Create New Post</h2>
 
   <form class="new-post-form">
@@ -29,7 +76,8 @@
     {{/each}}
   </ol>
 </section>
-{{/if}}
+{{/if}} --}}
 
 {{!-- links to file that profile uses to create new post --}}
-<script src="/javascript/add-post.js"></script>
+<script src="/javascript/create-pet.js"></script>
+<script src="/javascript/cloudinary.js"></script>

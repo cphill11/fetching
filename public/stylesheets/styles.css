@@ -1,0 +1,232 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --primary-color: #D16766;
+    --secondary-color: #35414F;
+    --tertiary-color: #BDC561;
+    --accent-color: #B3C5D7;
+}
+
+body{
+    font-family: Montserrat, Arial, sans-serif;
+}
+
+h1{
+    font-family: 'Fredoka One', cursive;
+    color: white;
+    font-size: 80px;
+    text-align: center;
+}
+
+.logo{
+    height: 80px;
+}
+
+.fetch-logo{
+    height: 100%;
+}
+
+.hero{
+    position: relative;
+    right: 0;
+    width: 100%; 
+    min-height: 100vh;
+    padding: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--secondary-color);
+    color: white;
+    z-index: 2;
+}
+
+.hero video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-text{
+    display: flex;
+    flex: wrap;
+    flex-direction: column;
+    z-index: 10;
+    align-items: center;
+}
+
+.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--secondary-color);
+    opacity: 0.7;
+    z-index: 9;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    top: 0;
+}
+
+nav {
+    margin: 7px 0;
+    display: flex;
+    flex: wrap;
+    justify-content: space-between;
+}
+
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+}
+
+nav li{
+    color: var(--primary-color);
+    font-weight: bold;
+    text-decoration: none;
+    padding: 3px;
+}
+
+.hero-btn{
+    padding-top: 20px;
+}
+.submit{
+    background-color: var(--primary-color);
+    color: white;
+    padding: 10px;
+    border: solid 2px var(--primary-color);
+    border-radius: 15px;
+    font-size: 20px;
+}
+
+.submit:hover{
+    background-color: white;
+    color: var(--primary-color);
+}
+
+.form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-form{
+    display: flex;
+    flex: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    border: solid 0px;
+    border-radius: 15px;
+    background-color: var(--accent-color);
+    height: 100%;
+    width: 30%;
+}
+
+.login-form .form-input input{
+    background-color: white;
+    border: solid 0;
+    border-radius: 15px;
+    padding: 5px;
+    width: 100%;
+    margin-top: 3px;
+}
+
+.row{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.signup-form{
+    display: flex;
+    flex: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    border: solid 0px;
+    border-radius: 15px;
+    background-color: var(--accent-color);
+    height: 100%;
+    width: 30%;
+}
+
+.signup-form .form-input input{
+    background-color: white;
+    border: solid 0;
+    border-radius: 15px;
+    padding: 5px;
+    width: 100%;
+    margin-top: 3px;
+}
+
+.form-input{
+    padding: 5px 0 5px 0;
+}
+
+.register{
+    color: white;
+    text-decoration: none;
+}
+
+.register:hover{
+    color: var(--primary-color)
+}
+
+.pet-card{
+    display: flex;
+    flex: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: rgba(209, 103, 102, 0.5);
+    box-shadow: 0px 5px 10px 0px rgba(209, 103, 102, 0.5);
+    width: 40%;
+    border-radius: 15px;
+}
+
+.pet-card img{
+    width: 300px;
+}
+
+.icons{
+    display: flex;
+    flex: wrap;
+    flex-direction: row;
+    justify-content: center;
+    width: 40%;
+}
+
+.heart-icon:hover{
+    color: var(--tertiary-color);
+}
+
+.fa-xmark:hover{
+    color: var(--tertiary-color);
+}
+
+footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 5px;
+    background-color: var(--secondary-color);
+    color: white;
+    display: flex;
+    flex: wrap;
+    align-items: center;
+}
+

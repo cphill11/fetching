@@ -1,0 +1,55 @@
+{{!-- }}
+    This will be the partial that will add pet profiles to the homepage when users are logged in. I added in some dummy text/content to get some of the styling done, but we will need to update these with the {{ petName content}}
+{{--}}
+
+<div class="row">
+    <article class="pet-card">
+        <img src="/template/assets/images/chance.png" alt="chance sitting on the couch">
+        <div class="petName">
+            <h3>Chance, 5</h3>
+        </div>
+        <div class="meta">
+            <div>
+            <p>East African Village Dog</p>
+            </div>
+            <div>
+            <p>Chance is an East African Village Dog from Uganda! She is 5 years old and enjoys being chased, rolling in dead animals, and eating deer poop.</p>
+            </div>
+        </div>
+    </article>
+</div>
+<div class="row">
+    <div class="icons">
+        <div>
+            <span class="fa-stack fa-2x">
+                <i class="fa-solid fa-circle fa-stack-2x"></i>
+                <i class="fa-solid fa-xmark fa-stack-1x fa-2xl fa-inverse"></i>
+            </span>
+        </div>
+        <div class="heart-icon">
+            <span class="fa-stack fa-2x">
+                <i class="fa-solid fa-circle fa-stack-2x"></i>
+                <i class="fa-solid fa-heart fa-stack-1x fa-xl" style="color:#D16766"></i>
+            </span>
+        </div>
+    </div>
+</div>
+
+{{!-- <article class="pet-card">
+  <div class="petName">
+    <h3>{{post.title}}</h3>
+    <span>({{format_url post_url}})</span>
+  </div>
+  <div class="meta">
+    {{vote_count}}
+    {{!-- format_plural "point" replaced point(s) by --  INCLUDE THIS WHEN 'LIKE' functionality fixed --}}
+    {{format_plural "point" vote_count}}
+    by
+    {{user.username}}
+    on
+    {{format_date created_at}}
+    |
+    <a href="/post/{{id}}">{{comments.length}}
+      {{format_plural "comment" comments.length}}</a>
+  </div>
+</article> --}}

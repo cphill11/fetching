@@ -1,5 +1,3 @@
-// from cloudinary demo
-
 // reads in the cloudinary env variable (place before)
 require("dotenv").config();
 

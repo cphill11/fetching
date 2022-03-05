@@ -1,5 +1,3 @@
-// cleanup to match our code
-
 async function editFormHandler(event) {
     event.preventDefault();
   
@@ -7,7 +5,7 @@ async function editFormHandler(event) {
     const id = window.location.toString().split("/")[
       window.location.toString().split("/").length - 1
     ];
-    const response = await fetch(`/api/posts/${id}`, {
+    const response = await fetch(`/api/user/${id}`, {
       method: "PUT",
       body: JSON.stringify({
         title,
