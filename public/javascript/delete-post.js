@@ -1,5 +1,3 @@
-// cleanup to match our code
-
 // button-click handler
 async function deleteFormHandler(event) {
     event.preventDefault();
