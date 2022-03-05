@@ -1,40 +1,6 @@
-{{!-- {{#if loggedIn}} --}}
-<div class="row">
-    <article class="pet-card">
-        <img src="/template/assets/images/chance.png" alt="chance sitting on the couch">
-        <div class="petName">
-            <h3>Chance, 5</h3>
-        </div>
-        <div class="meta">
-            <div>
-            <p>East African Village Dog</p>
-            </div>
-            <div>
-            <p>Chance is an East African Village Dog from Uganda! She is 5 years old and enjoys being chased, rolling in dead animals, and eating deer poop.</p>
-            </div>
-        </div>
-    </article>
-</div>
-<div class="row">
-    <div class="icons">
-        <div>
-            <span class="fa-stack fa-2x">
-                <i class="fa-solid fa-circle fa-stack-2x"></i>
-                <i class="fa-solid fa-xmark fa-stack-1x fa-2xl fa-inverse"></i>
-            </span>
-        </div>
-        <div class="heart-icon">
-            <span class="fa-stack fa-2x">
-                <i class="fa-solid fa-circle fa-stack-2x"></i>
-                <i class="fa-solid fa-heart fa-stack-1x fa-xl" style="color:#D16766"></i>
-            </span>
-        </div>
-    </div>
-</div>
-
-{{!-- {{else}} --}}
-{{!-- <section class="hero">
-        <video src="./assets/banner.mp4" muted loop autoplay></video>
+{{!-- {{#if loggedIn, show petcard partial, if not logged in, show homepage}} --}}
+ <section class="hero">
+        <video src="./template/assets/banner.mp4" muted loop autoplay></video>
         <div class="overlay"></div>
         <div class="hero-text">
             <h1>find your next puppy play date</h1>
@@ -42,4 +8,4 @@
                 <button class="submit">Sign Up</button>
             </div>
         </div>
-    </section> --}}
+    </section>
