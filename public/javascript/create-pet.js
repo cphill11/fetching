@@ -4,11 +4,11 @@
 async function newPetHandler(event) {
     event.preventDefault();
   
-    const petName = document.querySelector('input[name="petName"]').value;
-    const petAge = document.querySelector('input[name="age"]').value;
-    const petGender = document.querySelector('input[name="gender"]').value;
-    const petBreed = document.querySelector('input[name="breed"]').value;
-    const petBio = document.querySelector('input[name="description"]').value;
+    const petName = document.querySelector("#petNameInput").value;
+    const petAge = document.querySelector("#ageInput").value;
+    const petGender = document.querySelector("#genderInput").value;
+    const petBreed = document.querySelector("#breedInput").value;
+    const petBio = document.querySelector("#descriptionInput").value;
   
     const response = await fetch(`/api/posts`, {
       method: "POST",

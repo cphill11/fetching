@@ -17,14 +17,15 @@ async function loginFormHandler(event) {
       });
   
       if (response.ok) {
-        document.location.replace("/pet");
+        document.location.replace("/");
       } else {
         alert(response.statusText);
       }
     }
   }
 
-  
+  document.querySelector('.login-form').addEventListener('submit', loginFormHandler);
+
   // listen for submit event in the form
   function signupFormHandler(event) {
     event.preventDefault();
@@ -51,7 +52,7 @@ async function loginFormHandler(event) {
       });
       // check the response status
       if (response.ok) {
-        console.log("success");
+        document.location.replace("/login");
       } else {
         alert(response.statusText);
       }
@@ -59,5 +60,4 @@ async function loginFormHandler(event) {
   }
   
   document.querySelector('.signup-form').addEventListener('submit', signupFormHandler);
-  document.querySelector('.login-form').addEventListener('submit', loginFormHandler);
-  
+ 
