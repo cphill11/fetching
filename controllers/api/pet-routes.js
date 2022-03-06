@@ -48,7 +48,7 @@ router.put('/:id', (req, res) => {
     )
     .then(dbPetData => {
         if(!dbPetData) {
-            res.stuats(404).json({ message: 'No pet found with this id'})
+            res.status(404).json({ message: 'No pet found with this id'})
             return;
         }
         res.json(dbPetData);
@@ -74,6 +74,12 @@ router.post("/", (req, res) => {
         console.log(err);
         res.status(500).json(err);
     });
+});
+
+// using cloudinary; req 2nd post method
+router.post("/shabang", (req, res) => {
+    console.log(req.body);
+    res.json("upload maybe")
 });
 
 module.exports = router;

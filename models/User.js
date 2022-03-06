@@ -38,13 +38,13 @@ User.init(
       },
     },
 
-    // comment_text: {
-    //   type: DataTypes.STRING,
-    //   allowNull: false,
-    //   validate: {
-    //     len: [250],
-    //   },
-    // },
+    comment_text: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        len: [250],
+      },
+    },
     // for owners to comment (?)  or 'like' profile
     // post_id: {
     //   type: DataTypes.INTEGER,

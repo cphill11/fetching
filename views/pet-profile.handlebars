@@ -1,4 +1,11 @@
+<<<<<<< HEAD:views/pet-profile.handlebars
 {{!form to create a profile}}
+=======
+{{!-- edit profile placeholder; file fine points may need to be changed after Dariga completes her code --}}
+<div>
+    <input type="file" name="file" id="upload"/>
+</div>
+>>>>>>> 7f63e352850971ff0b87372a72ff553c5e490f7c:views/pet.handlebars
 <div class="row">
         <div class="form">
             <form class="login-form">
@@ -37,5 +44,48 @@
               </form>
               
         </div>
+<<<<<<< HEAD:views/pet-profile.handlebars
 </div>
 <script src="/javascript/create-pet.js"></script>
+=======
+        
+    </div>
+
+
+
+
+{{!-- <section>
+  <h2>Create New Post</h2>
+
+  <form class="new-post-form">
+    <div>
+      <label for="post-title">Title</label>
+      <input type="text" id="post-title" name="post-title" />
+    </div>
+    <div>
+      <label for="post-url">Link</label>
+      <input id="post-url" name="post-url" />
+    </div>
+    <button type="submit" class="btn">Create</button>
+  </form>
+</section>
+
+{{!-- allows use of template in profile-routes.js --}}
+{{#if posts.length}}
+<section>
+  <h2>Your Posts</h2>
+  <ol>
+    {{#each posts as |post|}}
+    <li>
+      {{> post-info post}}
+      <a href="/profile/edit/{{post.id}}" class="edit-link">Edit post</a>
+    </li>
+    {{/each}}
+  </ol>
+</section>
+{{/if}} --}}
+
+{{!-- links to file that profile uses to create new post --}}
+<script src="/javascript/create-pet.js"></script>
+<script src="/javascript/cloudinary.js"></script>
+>>>>>>> 7f63e352850971ff0b87372a72ff553c5e490f7c:views/pet.handlebars

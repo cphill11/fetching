@@ -1,6 +1,6 @@
-// cleanup to match our code
 // listen for the login event in the form
 async function loginFormHandler(event) {
+<<<<<<< HEAD
     event.preventDefault();
   
     const email = document.querySelector("#email-login").value.trim();
@@ -61,3 +61,31 @@ async function loginFormHandler(event) {
   
   document.querySelector('.signup-form').addEventListener('submit', signupFormHandler);
  
+=======
+  event.preventDefault();
+
+  const email = document.querySelector("#email-login").value.trim();
+  const password = document.querySelector("#password-login").value.trim();
+
+  if (email && password) {
+    const response = await fetch("/api/user/login", {
+      method: "post",
+      body: JSON.stringify({
+        email,
+        password,
+      }),
+      headers: { "Content-Type": "application/json" },
+    });
+
+    if (response.ok) {
+      document.location.replace("/pet");
+    } else {
+      alert(response.statusText);
+    }
+  }
+}
+
+document
+  .querySelector(".login-form")
+  .addEventListener("submit", loginFormHandler);
+>>>>>>> 7f63e352850971ff0b87372a72ff553c5e490f7c

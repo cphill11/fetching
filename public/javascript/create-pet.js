@@ -1,5 +1,3 @@
-// cleanup to match our code
-
 // functionality to allow creation of new post
 async function newPetHandler(event) {
     event.preventDefault();
