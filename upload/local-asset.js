@@ -1,6 +1,4 @@
-// reads in the cloudinary env variable (place before)
 require("dotenv").config();
-
 // aliasing version 2 & referencing w/ a variable
 const cloudinary = require("cloudinary").v2;
 
