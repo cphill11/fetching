@@ -31,7 +31,7 @@ Screencastify link:
 
 ## Image
 
-![Screenshot](/public/template/assets/images/screenshot.png)
+![Screenshot](/public/template/assets/images/fetch-screenshot.png)
 
 ## Credits:
 
