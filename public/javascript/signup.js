@@ -24,21 +24,13 @@ async function signupFormHandler(event) {
     });
     // check the response status
     if (response.ok) {
-<<<<<<< HEAD
-      document.location.replace('/login');
-=======
       console.log("success");
->>>>>>> 7f63e352850971ff0b87372a72ff553c5e490f7c
     } else {
       alert(response.statusText);
     }
   }
 }
 
-<<<<<<< HEAD
-document.querySelector(".signup-form").addEventListener("submit", signupFormHandler);
-=======
 document
   .querySelector(".signup-form")
   .addEventListener("submit", signupFormHandler);
->>>>>>> 7f63e352850971ff0b87372a72ff553c5e490f7c

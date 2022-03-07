@@ -2,8 +2,13 @@
 const { Model, DataTypes } = require("sequelize");
 // import our database connection from config.js
 const sequelize = require("../config/connection");
+const bcrypt = require("bcrypt")
 // Initialize User model (table) by extending off Sequelize's Model class
-class User extends Model {}
+class User extends Model {
+  checkPass(passwordAttempt) {
+    return bcrypt.compareSync(passwordAttempt, this.password)
+  }
+}
 
 // create up fields and rules for User model
 User.init(
@@ -40,7 +45,7 @@ User.init(
 
     comment_text: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: true,
       validate: {
         len: [250],
       },
@@ -54,6 +59,16 @@ User.init(
     //   },
   },
   {
+    hooks: {
+      async beforeCreate(newData) {
+        newData.password = await bcrypt.hash(newData.password, 10);
+        return newData
+      },
+      async beforeUpdate(updateData) {
+        newData.password = await bcrypt.hash(newData.password, 10);
+        return updateData
+      }
+    },
     sequelize,
     timestamps: false,
     freezeTableName: true,
