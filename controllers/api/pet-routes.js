@@ -6,14 +6,12 @@ router.get("/", (req, res) => {
     Pet.findAll({
         attributes: ['id', 'petName', 'owner_id', 'age', 'gender', 'breed', 'description']
     })
-    .then(dbPetData => {res.json(dbPetData)
-         console.log("hello");})
+    .then((dbPetData) => res.json(dbPetData))
     .catch(err => {
         console.log(err);
         res.status(500).json(err);
-    })
-
-})
+    });
+});
 
 //get one pet 
 router.get('/:id', (req, res) => {

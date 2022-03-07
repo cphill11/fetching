@@ -6,15 +6,15 @@ const petData = [
         petName: "Chance",
         owner: "3",
         age: "5",
-        gender: "true",
+        gender: "female",
         breed: "East African Village Dog",
-        description: "Chance is  super cute dog."
+        description: "Chance is a super cute dog."
     },
     {
         petName: "Frizz",
         owner: "1",
         age: "3",
-        gender: "true",
+        gender: "female",
         breed: "Collie Mix",
         description: "Frizz is a good pooch."
     },
@@ -22,7 +22,7 @@ const petData = [
         petName: "Ripley",
         owner: "3",
         age: "5",
-        gender: "true",
+        gender: "female",
         breed: "Doberman",
         description: "Ripley is a nice doberman."
     }

@@ -4,16 +4,15 @@
 
 <div class="row">
     <article class="pet-card">
-        <img src="/template/assets/images/chance.png" alt="chance sitting on the couch">
         <div class="petName">
-            <h3>Chance, 5</h3>
+            <h3>{{pet.petName}}, {{pet.age}}</h3>
         </div>
         <div class="meta">
             <div>
-            <p>East African Village Dog</p>
+            <h4>{{pet.breed}}</h4>
             </div>
             <div>
-            <p>Chance is an East African Village Dog from Uganda! She is 5 years old and enjoys being chased, rolling in dead animals, and eating deer poop.</p>
+            <p>{{pet.description}}</p>
             </div>
         </div>
     </article>
@@ -34,22 +33,3 @@
         </div>
     </div>
 </div>
-
-{{!-- <article class="pet-card">
-  <div class="petName">
-    <h3>{{post.title}}</h3>
-    <span>({{format_url post_url}})</span>
-  </div>
-  <div class="meta">
-    {{vote_count}}
-    {{!-- format_plural "point" replaced point(s) by --  INCLUDE THIS WHEN 'LIKE' functionality fixed --}}
-    {{format_plural "point" vote_count}}
-    by
-    {{user.username}}
-    on
-    {{format_date created_at}}
-    |
-    <a href="/post/{{id}}">{{comments.length}}
-      {{format_plural "comment" comments.length}}</a>
-  </div>
-</article> --}}
