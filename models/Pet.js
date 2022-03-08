@@ -28,7 +28,7 @@ Pet.init(
             allowNull: false,
         },
         gender: {
-            type: DataTypes.BOOLEAN,
+            type: DataTypes.STRING,
             allowNull: false
             //if true = male, if false = female
         },

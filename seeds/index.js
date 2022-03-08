@@ -11,13 +11,8 @@ const seedAll = async () => {
   await seedUsers();
   console.log('\n----- USERS SEEDED -----\n');
   await seedPets();
-  console.log('\n----- PROFILES SEEDED -----\n');
+  console.log('\n----- PETS SEEDED -----\n');
 
-//   await seedTags();
-//   console.log('\n----- TAGS SEEDED -----\n');
-
-//   await seedProductTags();
-//   console.log('\n----- PRODUCT TAGS SEEDED -----\n');
 
   process.exit(0);
 };
