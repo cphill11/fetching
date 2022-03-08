@@ -1,8 +1,4 @@
 // listen for submit event in the form
-function signupFormHandler(event) {
-  event.preventDefault();
-}
-
 async function signupFormHandler(event) {
   event.preventDefault();
 

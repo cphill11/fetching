@@ -10,6 +10,7 @@ Canine social app for fun-loving puppers who love to get out and wag their tails
 * dotenv
 * express
 * express-handlebars
+* express-session
 * mysql
 * mysql2
 * sequelize
@@ -27,7 +28,6 @@ As a dog owner, I want to screen out potentially unsuitable play mates so that m
 ## Websites
 Github: 
 
-Screencastify link: 
 
 ## Image
 
