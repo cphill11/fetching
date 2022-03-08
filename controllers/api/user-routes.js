@@ -94,4 +94,34 @@ router.delete("/:id", (req, res) => {
     });
 });
 
+router.post('/login', (req, res) => {
+  console.log(req.body)
+  User.findOne({
+    where: {
+      email:req.body.email
+    }
+  }).then(dbUser => {
+    if(!dbUser) {
+      res.status(400).json('Yo, this user is not in our database, swag.');
+      return
+    }
+    
+    //if there is a user, check password
+    const validPass = dbUser.checkPass(req.body.password)
+    
+    if(!validPass) {
+      res.status(400).json('Yo, this user is got a wrong password, swag.');
+      return
+    }
+
+    //create the session
+    req.session.save(() => {
+      req.session.user_id = dbUser.id
+      req.session.username = dbUser.username
+      req.session.loggedIn = true;
+
+      res.json('Logged in succesfully')
+    })
+  })
+})
 module.exports = router;
