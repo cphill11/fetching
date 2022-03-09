@@ -41,7 +41,7 @@ router.get('/pet/:id', (req, res) => {
   })
     .then(dbPetData => {
       if (!dbPetData) {
-        res.status(404),json({ messag: 'No peet found with this id'});
+        res.status(404),json({ messag: 'No pet found with this id'});
         requestAnimationFrame;
       }
 
