@@ -3,7 +3,7 @@ const { User } = require("../../models");
 
 // GET all users
 router.get("/", (req, res) => {
-    console.log(User);
+  console.log(User);
   User.findAll({
     attributes: ["id", "username", "email", "password", "comment_text"],
   })
@@ -37,42 +37,43 @@ router.get("/:id", (req, res) => {
 
 // CREATE new user data
 router.post("/", (req, res) => {
-     User.create({
-        username: req.body.username,
-        // comment_text: req.body.comment_text
-        email: req.body.email,
-        password: req.body.password
-    })
-    
-    .then(dbUserData => res.json(dbUserData))
-    .catch(err => {
-        console.log(err);
-        res.status(500).json(err);
+  User.create({
+    username: req.body.username,
+    // comment_text: req.body.comment_text
+    email: req.body.email,
+    password: req.body.password,
+  })
+
+    .then((dbUserData) => res.json(dbUserData))
+    .catch((err) => {
+      console.log(err);
+      res.status(500).json(err);
     });
 });
 
 // update user data by it's `id' value
 router.put("/:id", (req, res) => {
   User.update(
-      {
-        username: req.body.username
+    {
+      username: req.body.username,
+    },
+    {
+      where: {
+        id: req.params.id,
       },
-      {
-        where: {
-            id: req.params.id,
-        }
-    })
-  .then(dbUserData => {
-    if(!dbUserData) {
-        res.status(404).json({ message: 'No User found with this id'})
-        return;
     }
-    res.json(dbUserData);
+  )
+    .then((dbUserData) => {
+      if (!dbUserData) {
+        res.status(404).json({ message: "No User found with this id" });
+        return;
+      }
+      res.json(dbUserData);
     })
-    .catch(err => {
-        console.log(err);
-        res.status(500).json(err);
-    })
+    .catch((err) => {
+      console.log(err);
+      res.status(500).json(err);
+    });
 });
 
 // delete one user by its `id` value
@@ -95,34 +96,44 @@ router.delete("/:id", (req, res) => {
     });
 });
 
-router.post('/login', (req, res) => {
-  console.log(req.body)
+router.post("/login", (req, res) => {
+  console.log(req.body);
   User.findOne({
     where: {
-      email:req.body.email
-    }
-  }).then(dbUser => {
-    if(!dbUser) {
+      email: req.body.email,
+    },
+  }).then((dbUser) => {
+    if (!dbUser) {
       res.status(400).json("No User found with this id");
-      return
+      return;
     }
-    
+
     //if there is a user, check password
-    const validPass = dbUser.checkPass(req.body.password)
-    
-    if(!validPass) {
+    const validPass = dbUser.checkPass(req.body.password);
+
+    if (!validPass) {
       res.status(400).json("No password found with this id");
-      return
+      return;
     }
 
     //create the session
     req.session.save(() => {
-      req.session.user_id = dbUser.id
-      req.session.username = dbUser.username
+      req.session.user_id = dbUser.id;
+      req.session.username = dbUser.username;
       req.session.loggedIn = true;
 
-      res.json('Logged in succesfully')
-    })
-  })
-})
+      res.json("Logged in succesfully");
+    });
+  });
+});
+
+router.post("/logout", (req, res) => {
+  if (req.session.loggedIn) {
+    req.session.destroy(() => {
+      res.status(204).end();
+    });
+  } else {
+    res.status(404).end();
+  }
+});
 module.exports = router;
