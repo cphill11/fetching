@@ -43,6 +43,7 @@ router.post("/", (req, res) => {
         email: req.body.email,
         password: req.body.password
     })
+    
     .then(dbUserData => res.json(dbUserData))
     .catch(err => {
         console.log(err);
@@ -102,7 +103,7 @@ router.post('/login', (req, res) => {
     }
   }).then(dbUser => {
     if(!dbUser) {
-      res.status(400).json('Yo, this user is not in our database, swag.');
+      res.status(400).json("No User found with this id");
       return
     }
     
@@ -110,7 +111,7 @@ router.post('/login', (req, res) => {
     const validPass = dbUser.checkPass(req.body.password)
     
     if(!validPass) {
-      res.status(400).json('Yo, this user is got a wrong password, swag.');
+      res.status(400).json("No password found with this id");
       return
     }
 

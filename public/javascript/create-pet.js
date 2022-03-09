@@ -8,8 +8,8 @@ async function newPetHandler(event) {
     const petBreed = document.querySelector("#breedInput").value;
     const petBio = document.querySelector("#descriptionInput").value;
   
-    const response = await fetch(`/api/posts`, {
-      method: "POST",
+    const response = await fetch(`/api/pet`, {
+      method: "POST",  // should this be GET?? //
       body: JSON.stringify({
         petName,
         petAge,
