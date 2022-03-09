@@ -203,6 +203,10 @@ nav li{
     width: 300px;
 }
 
+.pet-cards{
+    padding: 20px;
+}
+
 .icons{
     display: flex;
     flex: wrap;

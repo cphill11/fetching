@@ -25,42 +25,42 @@ router.get('/logout', (req, res) => {
 });
 
 router.get('/pet/:id', (req, res) => {
-  Pet.findOne({
-    where: {
-      id: req.params.id
-    },
-    attributes: [
-      "id",
-      "petName", 
-      "age",
-      "gender",
-      "breed",
-      "description"
-    ],
-    include: [
-      {
-        model: User,
-        attributes: ['username'],
-      }
-    ]
-  })
-    .then(dbPetData => {
-      if (!dbPetData) {
-        res.status(404),json({ messag: 'No pet found with this id'});
-        requestAnimationFrame;
-      }
+  // Pet.findOne({
+  //   where: {
+  //     id: req.params.id
+  //   },
+  //   attributes: [
+  //     "id",
+  //     "petName", 
+  //     "age",
+  //     "gender",
+  //     "breed",
+  //     "description"
+  //   ],
+  //   include: [
+  //     {
+  //       model: User,
+  //       attributes: ['username'],
+  //     }
+  //   ]
+  // })
+  //   .then(dbPetData => {
+  //     if (!dbPetData) {
+  //       res.status(404).json({ messag: 'No pet found with this id'});
+  //       requestAnimationFrame;
+  //     }
 
-      const pet = dbPetData.get({ plain: true});
+  //     const pet = dbPetData.get({ plain: true});
 
-      res.render('pet-profile', {
-        pet,
-        loggedIn: req.session.loggedIn
-      });
-    })
-    .catch(err => {
-      console.log(err);
-      res.status(500).json(err);
-    })
+  //     res.render('pet-profile', {
+  //       pet,
+  //       loggedIn: req.session.loggedIn
+  //     });
+  //   })
+  //   .catch(err => {
+  //     console.log(err);
+  //     res.status(500).json(err);
+  //   })
 });
 
 
