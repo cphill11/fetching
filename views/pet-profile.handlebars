@@ -1,10 +1,11 @@
-<div>
-    <input type="file" name="file" id="upload"/>
-</div>
+
 <div class="row">
         <div class="form">
             <form class="login-form">
                 <h2>Create a Profile</h2>
+                  <div>
+                    <input type="file" name="file" id="upload" class="photo-upload"/>
+                  </div>
                 <div class="form-input">
                     <label for="petName">Pet name</label>
                     <div class="sec-2">
@@ -42,6 +43,15 @@
         
     </div>
 
+{{#if pet.length}}
+<div class="row">
+  {{#each pet as |pet|}}
+
+  {{>pet-card pet}}
+
+  {{/each}}
+</div>
+{{/if}}
 
 {{!-- links to file that profile uses to create new post --}}
 <script src="/javascript/create-pet.js"></script>
