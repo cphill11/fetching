@@ -1,11 +1,9 @@
+const router = require('express').Router();
 const { Pet, User } = require('../models');
 
-const router = require('express').Router();
 
 //find all pets associate with user id
 router.get('/', (req, res) => {
-    console.log(req.session);
-    console.log('======================');
     Pet.findAll({
         where: {
             owner_id: req.session.user_id
