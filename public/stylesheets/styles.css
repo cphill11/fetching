@@ -250,7 +250,7 @@ nav li{
 
 footer{
     position: absolute;
-    bottom: 0;
+    left: 0;
     width: 100%;
     padding: 5px;
     background-color: var(--secondary-color);
