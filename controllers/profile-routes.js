@@ -4,6 +4,7 @@ const { Pet, User } = require('../models');
 
 //find all pets associate with user id
 router.get('/', (req, res) => {
+    console.log("!!!!!!!!!!!!!",req.session.user_id)
     Pet.findAll({
         where: {
             owner_id: req.session.user_id
@@ -18,7 +19,7 @@ router.get('/', (req, res) => {
         include: [
             {
                 model: User,
-                attributes: ["username"]
+                attributes: ["username", "id"]
             }
         ]
     })
