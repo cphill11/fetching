@@ -10,6 +10,8 @@
         </div>
 </section>
 
+{{#if loggedIn}}
+
   {{#if pets.length}}
   <div class="row">
     <h2>Pets Near You</h2>
@@ -23,3 +25,5 @@
   </div>
   
   {{/if}}
+
+{{/if}}
