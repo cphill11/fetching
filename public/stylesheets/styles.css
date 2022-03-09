@@ -152,6 +152,13 @@ nav li{
     justify-content: center;
 }
 
+.row h2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 10px;
+}
+
 .signup-form{
     display: flex;
     flex: wrap;
@@ -205,6 +212,7 @@ nav li{
 
 .pet-cards{
     padding: 20px;
+    justify-content: center;
 }
 
 .icons{
