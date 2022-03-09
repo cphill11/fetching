@@ -43,13 +43,13 @@ User.init(
       },
     },
 
-    comment_text: {
-      type: DataTypes.STRING,
-      allowNull: true,
-      validate: {
-        len: [250],
-      },
-    },
+    // comment_text: {
+    //   type: DataTypes.STRING,
+    //   allowNull: true,
+    //   validate: {
+    //     len: [250],
+    //   },
+    // },
   },
   {
     hooks: {

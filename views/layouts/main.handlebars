@@ -24,11 +24,12 @@ views folder is a required UI component b/c of Model-View-Controller architectur
             <ul>
                 <li><a href="/">Home</a></li>
                 <li><a href="/signup">Sign Up</a></li>
-                {{!-- {{#if loggedIn}} --}}
+                {{#if loggedIn}}
                 <a href="/pet-profile">Pet Profile</a>
                 <li id="logout">Logout</li>
-                {{!-- {{else}} --}}
+                {{else}}
                <li><a href="/login">LogIn</a></li>
+               {{/if}}
             </ul>
         </nav>
     </header>
