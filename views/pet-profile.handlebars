@@ -43,19 +43,21 @@
         
     </div>
 
-<div class="pet-cards">
 
   {{#if pets.length}}
   <div class="row">
-    {{#each pets as |pet|}}
+    <h2>Your Pets</h2>
+      <div>
+      {{#each pets as |pet|}}
 
-    {{>pet-card pet}}
+      {{>pet-card pet}}
 
-    {{/each}}
+      {{/each}}
+      </div>
   </div>
+  
   {{/if}}
 
-</div>
 
 {{!-- links to file that profile uses to create new post --}}
 <script src="/javascript/create-pet.js"></script>

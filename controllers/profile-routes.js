@@ -24,7 +24,7 @@ router.get('/', (req, res) => {
         ]
     })
     .then(dbPetData => {
-        const pets = dbPetData.map(pet=> pet.get({ plain: true}));
+        const pets = dbPetData.map(pet => pet.get({ plain: true}));
         res.render('pet-profile', {pets, loggedIn: true});
     })
     .catch(err => {

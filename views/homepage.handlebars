@@ -9,3 +9,17 @@
             </div>
         </div>
 </section>
+
+  {{#if pets.length}}
+  <div class="row">
+    <h2>Pets Near You</h2>
+      <div>
+      {{#each pets as |pet|}}
+
+      {{>pet-card pet}}
+
+      {{/each}}
+      </div>
+  </div>
+  
+  {{/if}}

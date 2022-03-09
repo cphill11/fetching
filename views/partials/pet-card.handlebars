@@ -1,17 +1,17 @@
 {{!-- This will be the partial that will add pet profiles to the homepage when users are logged in. I added in some dummy text/content to get some of the styling done, but we will need to update these with the {{ petName content}}
 --}}
 
-<div class="row">
+<div>
     <article class="pet-card">
         <div class="petName">
-            <h3>{{pet.petName}}, {{pet.age}}</h3>
+            <h3>{{petName}}, {{age}}</h3>
         </div>
         <div class="meta">
             <div>
-            <h4>{{pet.breed}}</h4>
+            <h4>{{breed}}</h4>
             </div>
             <div>
-            <p>{{pet.description}}</p>
+            <p>{{description}}</p>
             </div>
         </div>
     </article>

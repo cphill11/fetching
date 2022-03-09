@@ -152,6 +152,13 @@ nav li{
     justify-content: center;
 }
 
+.row h2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 10px;
+}
+
 .signup-form{
     display: flex;
     flex: wrap;
@@ -194,9 +201,10 @@ nav li{
     justify-content: space-between;
     background-color: rgba(209, 103, 102, 0.5);
     box-shadow: 0px 5px 10px 0px rgba(209, 103, 102, 0.5);
-    width: 40%;
+    width: 30%;
     border-radius: 15px;
     margin-bottom: 20px;
+    padding: 10px;
 }
 
 .pet-card img{
@@ -205,6 +213,7 @@ nav li{
 
 .pet-cards{
     padding: 20px;
+    justify-content: center;
 }
 
 .icons{
