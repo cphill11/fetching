@@ -25,10 +25,10 @@ views folder is a required UI component b/c of Model-View-Controller architectur
                 <li><a href="/">Home</a></li>
                 {{#if loggedIn}}
                   <li><a href="/pet-profile">Pet Profile</a></li>
-                  <li><a href="logout" class="btn-no-style">Logout</a></li>
+                  <button class="no-style" id="logout">Logout</button>
                 {{else}}
                 <li><a href="/signup">Sign Up</a></li>
-                <li><a href="/login">LogIn</a></li>
+                <li><a href="/login">Login</a></li>
                 {{/if}}
             </ul>
         </nav>
