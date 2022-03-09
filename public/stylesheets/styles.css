@@ -204,6 +204,7 @@ nav li{
     width: 40%;
     border-radius: 15px;
     margin-bottom: 20px;
+    padding: 10px;
 }
 
 .pet-card img{

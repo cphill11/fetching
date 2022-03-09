@@ -2,9 +2,35 @@ const { Pet, User } = require('../models');
 
 const router = require('express').Router();
 
+// router.get('/', (req, res) => {
+//   res.render('homepage', {loggedIn: req.session.loggedIn});
+// });
+
 router.get('/', (req, res) => {
-  res.render('homepage', {loggedIn: req.session.loggedIn});
-});
+  Pet.findAll({
+    attributes: [
+      "id", 
+      "petName",
+      "age",
+      "breed",
+      "description"
+    ],  
+    include: [
+      {
+        model: User,
+        attributes: ['username']
+      }
+    ]
+  })
+  .then(dbPetData => {
+    const pets = dbPetData.map(pet => pet.get({ plain: true}));
+    res.render('homepage',{ pets, loggedIn: true});
+  })
+  .catch((err) => {
+    console.log(err);
+    res.status(500).json(err);
+  });
+})
 
 router.get('/login', (req, res) => {
     res.render('login', {loggedIn: req.session.loggedIn});
