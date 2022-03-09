@@ -16,7 +16,7 @@ async function loginFormHandler(event) {
     });
 
     if (response.ok) {
-      document.location.replace("/pet");
+      document.location.replace("/pet-profile");
     } else {
       alert(response.statusText);
     }

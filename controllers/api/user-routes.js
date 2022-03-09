@@ -43,6 +43,7 @@ router.post("/", (req, res) => {
         email: req.body.email,
         password: req.body.password
     })
+    
     .then(dbUserData => res.json(dbUserData))
     .catch(err => {
         console.log(err);
@@ -94,4 +95,34 @@ router.delete("/:id", (req, res) => {
     });
 });
 
+router.post('/login', (req, res) => {
+  console.log(req.body)
+  User.findOne({
+    where: {
+      email:req.body.email
+    }
+  }).then(dbUser => {
+    if(!dbUser) {
+      res.status(400).json("No User found with this id");
+      return
+    }
+    
+    //if there is a user, check password
+    const validPass = dbUser.checkPass(req.body.password)
+    
+    if(!validPass) {
+      res.status(400).json("No password found with this id");
+      return
+    }
+
+    //create the session
+    req.session.save(() => {
+      req.session.user_id = dbUser.id
+      req.session.username = dbUser.username
+      req.session.loggedIn = true;
+
+      res.json('Logged in succesfully')
+    })
+  })
+})
 module.exports = router;
