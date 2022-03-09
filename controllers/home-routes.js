@@ -40,11 +40,10 @@ router.get('/signup', (req, res) => {
     res.render('signup', {loggedIn: req.session.loggedIn});
 });
 
-router.get('/logout', (req, res) => {
-  res.render('login', {loggedIn: req.session.loggedIn});
-  //get user including pet 
-    res.render('pet-profile');
-});
+// router.get('/logout', (req, res) => {
+//   res.render('/');
+ 
+// });
 
 router.get('/pet/:id', (req, res) => {
   // Pet.findOne({
