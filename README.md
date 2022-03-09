@@ -26,7 +26,8 @@ As a dog owner, I want to screen out potentially unsuitable play mates so that m
 
 
 ## Websites
-Github: 
+Github: git@github.com:cphill11/fetching.git
+Heroku link: 
 
 
 ## Image
@@ -35,7 +36,7 @@ Github:
 
 ## Credits:
 
-Danielle Fortin, Dariga Iskakova, Michael Monihan, and Criste Phillips.
+Danielle Fortin, Dariga Iskakova, and Criste Phillips.
 
 ## License
 MIT
