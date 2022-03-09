@@ -59,15 +59,15 @@ router.put('/:id', (req, res) => {
     })
 })
 
-//add new dog profile
+//add new dog profile 
 router.post("/", (req, res) => {
     Pet.create({
         petName: req.body.petName,
-        owner_id: req.body.owner_id,
-        age: req.body.age,
-        gender: req.body.gender,
-        breed: req.body.breed,
-        description: req.body.description
+        owner_id: req.session.user_id,
+        age: req.body.petAge,
+        gender: req.body.petGender,
+        breed: req.body.petBreed,
+        description: req.body.petBio
     })
     .then(dbPetData => res.json(dbPetData))
     .catch(err => {

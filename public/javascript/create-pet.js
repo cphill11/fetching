@@ -8,8 +8,8 @@ async function newPetHandler(event) {
     const petBreed = document.querySelector("#breedInput").value;
     const petBio = document.querySelector("#descriptionInput").value;
   
-    const response = await fetch(`/api/posts`, {
-      method: "POST",
+    const response = await fetch(`/api/pet`, {
+      method: "POST", 
       body: JSON.stringify({
         petName,
         petAge,
@@ -22,11 +22,6 @@ async function newPetHandler(event) {
       },
     });
   
-    if (response.ok) {
-      document.location.replace("/pet");
-    } else {
-      alert(response.statusText);
-    }
   }
   
   document.querySelector('.login-form').addEventListener('submit', newPetHandler);

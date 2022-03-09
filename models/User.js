@@ -50,13 +50,6 @@ User.init(
         len: [250],
       },
     },
-    // for owners to comment (?)  or 'like' profile
-    // post_id: {
-    //   type: DataTypes.INTEGER,
-    //   references: {
-    //     model: "post",
-    //     key: "id",
-    //   },
   },
   {
     hooks: {
