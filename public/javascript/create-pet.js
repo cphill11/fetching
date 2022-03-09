@@ -9,7 +9,7 @@ async function newPetHandler(event) {
     const petBio = document.querySelector("#descriptionInput").value;
   
     const response = await fetch(`/api/pet`, {
-      method: "POST",  // should this be GET?? //
+      method: "POST", 
       body: JSON.stringify({
         petName,
         petAge,
@@ -22,11 +22,6 @@ async function newPetHandler(event) {
       },
     });
   
-    if (response.ok) {
-      document.location.replace("/pet");
-    } else {
-      alert(response.statusText);
-    }
   }
   
   document.querySelector('.login-form').addEventListener('submit', newPetHandler);
