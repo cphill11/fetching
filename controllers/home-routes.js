@@ -5,15 +5,19 @@ router.get('/', (req, res) => {
 });
 
 router.get('/login', (req, res) => {
-    res.render('login');
+    res.render('login', {loggedIn: req.session.loggedIn});
   });
 
 router.get('/signup', (req, res) => {
-    res.render('signup');
+    res.render('signup', {loggedIn: req.session.loggedIn});
 });
 
 router.get('/pet-profile', (req, res) => {
-    res.render('pet-profile');
+    res.render('pet-profile', {loggedIn: req.session.loggedIn});
+});
+
+router.get('/logout', (req, res) => {
+  res.render('login', {loggedIn: req.session.loggedIn});
 });
 
 router.get('/pet/:id', (req, res) => {
