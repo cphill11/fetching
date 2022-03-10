@@ -1,6 +1,7 @@
 {{!-- This will be the partial that will add pet profiles to the homepage when users are logged in. I added in some dummy text/content to get some of the styling done, but we will need to update these with the {{ petName content}}
 --}}
 
+{{!-- need image tage w/ url & src to be called back for it to be displayed (2nd) --}}
 <div>
     <article class="pet-card">
         <div class="petName">
@@ -8,7 +9,7 @@
         </div>
         <div class="meta">
             <div>
-            <h4>{{breed}}</h4>
+            <h4>{{breed}}, {{gender}}</h4>
             </div>
             <div>
             <p>{{description}}</p>
