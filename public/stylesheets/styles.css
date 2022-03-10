@@ -117,7 +117,7 @@ nav li{
     color: var(--primary-color);
     font-weight: bold;
     text-decoration: none;
-    padding: 3px;
+    padding: 10px;
 }
 
 .hero-btn{
