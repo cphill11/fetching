@@ -22,6 +22,9 @@ upload.addEventListener("change", function(event) {
         })
         .then(postUpload => {
             console.log(postUpload)
+        
         })
     })
 })
+
+// this needs to be prepended somewhere `https://res.cloudinary.com/dkzs0mf5p/image/fetch/`
