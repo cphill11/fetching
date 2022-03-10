@@ -13,6 +13,7 @@ router.get('/', (req, res) => {
             "id", 
             "petName",
             "age",
+            "gender",
             "breed",
             "description"
         ],
