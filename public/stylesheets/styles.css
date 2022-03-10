@@ -262,5 +262,6 @@ footer{
     display: flex;
     flex: wrap;
     align-items: center;
+    margin-top: 100px;
 }
 
