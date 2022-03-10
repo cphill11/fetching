@@ -9,6 +9,7 @@
     --secondary-color: #35414F;
     --tertiary-color: #BDC561;
     --accent-color: #B3C5D7;
+    --dark: rgb(53, 56, 65);
 }
 
 body{
@@ -93,7 +94,9 @@ header{
     justify-content: space-between;
     flex-wrap: wrap;
     top: 0;
-}
+    margin-right: 20px;
+    margin-left: 20px;
+    }
 
 nav {
     margin: 7px 0;
@@ -127,6 +130,7 @@ nav li{
     border: solid 2px var(--primary-color);
     border-radius: 15px;
     font-size: 20px;
+    box-shadow: 3px 3px var(--dark);
 }
 
 .submit:hover{
