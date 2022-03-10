@@ -32,7 +32,7 @@ Heroku link: https://intense-crag-43217.herokuapp.com/
 
 ## Image
 
-![Screenshot](/public/template/assets/images/fetch-screenshot.png)
+![Screenshot](/public/template/assets/images/screenshot.png)
 
 ## Credits:
 

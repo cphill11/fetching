@@ -24,4 +24,4 @@ upload.addEventListener("change", function(event) {
             console.log(postUpload)
         })
     })
-} )
+})
