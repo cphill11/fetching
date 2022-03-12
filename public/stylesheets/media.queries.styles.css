@@ -1,0 +1,48 @@
+/* MEDIA QUERY FOR SMALLER DESKTOP SCREENS AND SMALLER */
+@media screen and (max-width: 980px) {
+    header {
+            padding-bottom: 0;
+            justify-content: center;
+            position: relative;
+        }
+        header nav ul {
+            margin-top: 20px;
+            width: 100%;
+            justify-content: center;
+        }
+        header nav ul li {
+            font-size: 20px;
+        }
+        footer {
+            text-align: center;
+            width: 100%;
+        }
+        .pet-card {
+            width: 100%;
+        }
+ }
+  
+ /* MEDIA QUERY FOR TABLETS AND SMALLER */
+ @media screen and (max-width: 768px) {
+     .hero-btn {
+        width: 100%;
+    }
+
+     .login-form, .pet-card {
+        width: 200;
+        display: flex;
+     }
+ }
+ 
+ 
+ /* MEDIA QUERY FOR MOBILE PHONES AND SMALLER */
+ @media screen and (max-width: 575px) {
+     .hero-btn {
+         width: 100%;
+     }
+ 
+     .login-form, .pet-card {
+        width: 100px;
+        display: flex;
+     }
+ }

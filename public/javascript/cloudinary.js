@@ -1,4 +1,5 @@
 var upload = document.querySelector("#upload");
+let htmlImage = '';
 
 upload.addEventListener("change", function(event) {
     console.log(event.target.files)
@@ -21,10 +22,8 @@ upload.addEventListener("change", function(event) {
             body: JSON.stringify(data)
         })
         .then(postUpload => {
-            console.log(postUpload)
-        
+                console.log(postUpload)
+            htmlImage = data.url
         })
     })
 })
-
-// this needs to be prepended somewhere `https://res.cloudinary.com/dkzs0mf5p/image/fetch/`

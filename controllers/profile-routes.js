@@ -15,7 +15,8 @@ router.get('/', (req, res) => {
             "age",
             "gender",
             "breed",
-            "description"
+            "description",
+            "image"
         ],
         include: [
             {

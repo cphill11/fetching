@@ -39,8 +39,12 @@ Pet.init(
         description: {
             type: DataTypes.STRING,
             allowNull: false
-        }
-        // need place for url of image to be accepted (1st)
+        },
+        // place for url of image to be accepted 
+        image: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
     },
     {
         sequelize,
