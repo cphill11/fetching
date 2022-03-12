@@ -1,12 +1,14 @@
 // functionality to allow creation of new post
 async function newPetHandler(event) {
     event.preventDefault();
-  
+    console.log(htmlImage);
+
     const petName = document.querySelector("#petNameInput").value;
     const petAge = document.querySelector("#ageInput").value;
     const petGender = document.querySelector("#genderInput").value;
     const petBreed = document.querySelector("#breedInput").value;
     const petBio = document.querySelector("#descriptionInput").value;
+    const image = htmlImage;
   
     const response = await fetch(`/api/pet`, {
       method: "POST", 

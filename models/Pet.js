@@ -40,7 +40,7 @@ Pet.init(
             type: DataTypes.STRING,
             allowNull: false
         },
-        // need place for url of image to be accepted (1st); done
+        // place for url of image to be accepted 
         image: {
             type: DataTypes.STRING,
             allowNull: false,

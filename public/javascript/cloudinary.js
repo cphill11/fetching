@@ -1,7 +1,5 @@
 var upload = document.querySelector("#upload");
-
-// get selector, find the form
-// append input into it w/ value of URL (URL is inside the post upload; name will be image)
+let htmlImage = '';
 
 upload.addEventListener("change", function(event) {
     console.log(event.target.files)
@@ -24,10 +22,8 @@ upload.addEventListener("change", function(event) {
             body: JSON.stringify(data)
         })
         .then(postUpload => {
-            console.log(postUpload)
-        
+                console.log(postUpload)
+            htmlImage = data.url
         })
     })
 })
-
-// this needs to be prepended somewhere `https://res.cloudinary.com/dkzs0mf5p/image/fetch/`
