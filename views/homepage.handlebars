@@ -1,21 +1,10 @@
 {{!-- {{#if loggedIn, show petcard partial, if not logged in, show homepage}} --}}
- <section class="hero">
-        <video src="./template/assets/banner.mp4" muted loop autoplay></video>
-        <div class="overlay"></div>
-        <div class="hero-text">
-            <h1>find your next puppy play date</h1>
-            <div class="hero-btn">
-                <a href="/signup"><button class="submit">Sign Up</button></a>
-            </div>
-        </div>
-</section>
-{{!-- 
 {{#if loggedIn}}
 
   {{#if pets.length}}
   <div class="row">
     <h2>Pets Near You</h2>
-      <div>
+      
       {{#each pets as |pet|}}
 
       {{>pet-card pet}}
@@ -26,4 +15,16 @@
   
   {{/if}}
 
-{{/if}} --}}
+{{else}}
+ <section class="hero">
+        <video src="./template/assets/banner.mp4" muted loop autoplay></video>
+        <div class="overlay"></div>
+        <div class="hero-text">
+            <h1>find your next puppy play date</h1>
+            <div class="hero-btn">
+                <a href="/signup"><button class="submit">Sign Up</button></a>
+            </div>
+        </div>
+</section>
+{{/if}}
+
