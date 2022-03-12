@@ -226,6 +226,7 @@ nav li{
     margin: 20px;
     padding: 10px;
     color: var(--secondary-color);
+    margin-bottom: 100px;
 }
 
 .pet-card img{
