@@ -1,5 +1,8 @@
 var upload = document.querySelector("#upload");
 
+// get selector, find the form
+// append input into it w/ value of URL (URL is inside the post upload; name will be image)
+
 upload.addEventListener("change", function(event) {
     console.log(event.target.files)
     let formData = new FormData();

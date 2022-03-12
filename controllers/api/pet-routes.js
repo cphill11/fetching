@@ -19,7 +19,8 @@ router.get('/:id', (req, res) => {
         where: {
             id: req.params.id
         },
-        attributes: ['id', 'petName', 'owner_id', 'age', 'gender', 'breed', 'description']
+        // image pulled in from model/pet.js
+        attributes: ['id', 'petName', 'owner_id', 'age', 'gender', 'breed', 'description', 'image']
     })
     .then(dbPetData => {
         if(!dbPetData) {
@@ -59,7 +60,7 @@ router.put('/:id', (req, res) => {
     })
 })
 
-//add new dog profile 
+//add new dog profile, image method added 
 router.post("/", (req, res) => {
     Pet.create({
         petName: req.body.petName,
@@ -67,7 +68,8 @@ router.post("/", (req, res) => {
         age: req.body.petAge,
         gender: req.body.petGender,
         breed: req.body.petBreed,
-        description: req.body.petBio
+        description: req.body.petBio,
+        image: req.body.image
     })
     .then(dbPetData => res.json(dbPetData))
     .catch(err => {

@@ -16,6 +16,7 @@ async function newPetHandler(event) {
         petGender,
         petBreed,
         petBio,
+        image
       }),
       headers: {
         "Content-Type": "application/json",

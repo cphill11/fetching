@@ -79,7 +79,7 @@ app.set('view engine', 'handlebars');
 //turn on routes
 app.use(routes);
 
-//turn on connection to db and server
+//turn on connection to db and server; change false --> true, save --> then flip back, save --> to reset tables
 sequelize.sync({ force: false }).then(() => {
     app.listen(PORT, () => console.log('Now listening'));
 })
