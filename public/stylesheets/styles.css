@@ -241,6 +241,11 @@ nav li{
     padding-top: 40px;
 }
 
+.petPic {
+    display: flex;
+    justify-content: center;
+}
+
 .icons{
     display: flex;
     flex: wrap;
