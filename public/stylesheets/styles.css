@@ -176,7 +176,7 @@ nav li{
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-top: 10px;
+    color: var(--secondary-color);
 }
 
 .signup-form{
@@ -225,6 +225,7 @@ nav li{
     border-radius: 15px;
     margin: 20px;
     padding: 10px;
+    color: var(--secondary-color);
 }
 
 .pet-card img{
@@ -234,6 +235,10 @@ nav li{
 .pet-cards{
     padding: 20px;
     justify-content: center;
+}
+
+.your-pets{
+    padding-top: 40px;
 }
 
 .icons{
