@@ -230,7 +230,14 @@ nav li{
 }
 
 .pet-card img{
-    width: 300px;
+    width: 75%;
+    border-radius: 15px;
+    box-shadow: 3px 3px var(--dark);
+}
+
+.petPic {
+    display: flex;
+    justify-content: center;
 }
 
 .pet-cards{
@@ -242,9 +249,8 @@ nav li{
     padding-top: 40px;
 }
 
-.petPic {
-    display: flex;
-    justify-content: center;
+.photo-upload {
+    color:rgba(0, 0, 0, 0);
 }
 
 .icons{
