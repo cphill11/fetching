@@ -29,6 +29,7 @@ As a dog owner, I want to screen out potentially unsuitable play mates so that m
 Github: git@github.com:cphill11/fetching.git
 Heroku link: https://intense-crag-43217.herokuapp.com/
 
+Google slides: https://docs.google.com/presentation/d/1c-u7MIqnOhYjyC7K7F1m098T4mMV1kQ5rfrkSXT2VPQ/edit#slide=id.g11426133d54_0_2
 
 ## Image
 
